@@ -1,0 +1,30 @@
+id,name,city,latitude,longitude,iata_code
+1,Hartsfield-Jackson Atlanta International Airport,Atlanta,33.636719,-84.428067,ATL
+2,Austin-Bergstrom International Airport,Austin,30.202557,-97.667217,AUS
+3,Charlotte Douglas International Airport,Charlotte,35.213879,-80.943069,CLT
+4,O'Hare International Airport,Chicago,41.974162,-87.907321,ORD
+5,Cincinnati/Northern Kentucky International Airport,Cincinnati,39.049004,-84.662178,CVG
+6,Denver International Airport,Denver,39.849331,-104.673178,DEN
+7,John Glenn Columbus International Airport,Columbus,39.997962,-82.891278,CMH
+8,Dallas/Fort Worth International Airport,Dallas,32.899809,-97.040335,DFW
+9,Reagan National Airport,Washington,38.853371,-77.044683,DCA
+10,George Bush Intercontinental Airport,Houston,29.99025,-95.336787,IAH
+11,Fort Lauderdale-Hollywood International Airport,Fort Lauderdale,26.072594,-80.15275,FLL
+12,Los Angeles International Airport,Los Angeles,33.941589,-118.40853,LAX
+13,Los Angeles International Airport,Los Angeles,33.941589,-118.40853,LAX
+14,Minneapolis-St. Paul International Airport,Minneapolis,44.884786,-93.222547,MSP
+15,Pierre Elliott Trudeau International Airport,Montreal,45.466797,-73.74907,YUL
+16,Nashville International Airport,Nashville,36.131894,-86.668088,BNA
+17,Logan International Airport,Boston,42.365573,-71.009241,BOS
+18,LaGuardia Airport,New York,40.774864,-73.873395,LGA
+19,Newark Liberty International Airport,Newark,40.689531,-74.174462,EWR
+20,Orlando International Airport,Orlando,28.431157,-81.30808,MCO
+21,Philadelphia International Airport,Philadelphia,39.874401,-75.241141,PHL
+22,Portland International Airport,Portland,45.589769,-122.595758,PDX
+23,Salt Lake City International Airport,Salt Lake City,40.786988,-111.975535,SLC
+24,Mineta San Jose International Airport,San Jose,37.363947,-121.92893,SJC
+25,Seattle-Tacoma International Airport,Seattle,47.450249,-122.308817,SEA
+26,Kansas City International Airport,Kansas City,39.297606,-94.713905,MCI
+27,Lambert-St. Louis International Airport,St. Louis,38.741221,-90.364458,STL
+28,Toronto Pearson International Airport,Toronto,43.682806,-79.627567,YYZ
+29,Vancouver International Airport,Vancouver,49.195917,-123.177433,YVR
