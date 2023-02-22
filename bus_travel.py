@@ -2,13 +2,14 @@ import googlemaps
 import pandas as pd
 import time
 import os
+import config
 
 data_directory = '/Users/justinchambers/Desktop/Programming/MLS/Schedule/data'
 if not os.path.exists(data_directory):
     os.makedirs(data_directory)
 
 # set up the Google Maps API client
-gmaps = googlemaps.Client(key='AIzaSyAjBn8FuWH6TosSpmJpU-elbSebe9XhPQo')
+gmaps = googlemaps.Client(key='config.api_key')
 
 # read the CSV file containing the venues data
 venues = pd.read_csv(
