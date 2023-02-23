@@ -5,23 +5,21 @@ from ortools.constraint_solver import pywrapcp
 
 # Load the teams and venues data
 teams = pd.read_csv(
-    '/Users/justinchambers/Desktop/Programming/MLS/Schedule/data/teams.csv')
+    'data/teams.csv')
 venues = pd.read_csv(
-    '/Users/justinchambers/Desktop/Programming/MLS/Schedule/data/venues.csv')
+    'data/venues.csv')
 
 # Load the airports data
 airports = pd.read_csv(
-    '/Users/justinchambers/Desktop/Programming/MLS/Schedule/data/airports.csv')
+    'data/airports.csv')
 
 # Load the travel time data
 bus_travel_data = pd.read_csv(
-    '/Users/justinchambers/Desktop/Programming/MLS/Schedule/data/bus_travel_data.csv')
+    'data/bus_travel_data.csv')
 print(teams['name'])
-print(bus_travel_data.index)
 air_travel_data = pd.read_csv(
-    '/Users/justinchambers/Desktop/Programming/MLS/Schedule/data/air_travel_data.csv')
+    'data/air_travel_data.csv')
 print(teams['name'])
-print(air_travel_data.index)
 
 # Calculate the travel times
 bus_travel_times = pd.DataFrame(
@@ -41,8 +39,7 @@ for i, from_team in teams.iterrows():
         if i != j:
             travel_time = None
             if from_team['city'] == to_team['city']:
-                travel_time = bus_travel_data.loc[from_team['name'],
-                                                  to_team['name']]
+                travel_time = bus_travel_data.loc[from_team['name'], to_team['name']]
             else:
                 travel_data = air_travel_data[(air_travel_data['Origin'] == from_team['city']) & (
                     air_travel_data['Destination'] == to_team['city'])]
@@ -132,7 +129,7 @@ routing = pywrapcp.RoutingModel(manager)
 
 # Define the time window constraints
 bus_travel_times = bus_travel_times.where(bus_travel_times <= 3, other=3)
-air_travel_times = ...
+air_travel_times = air_travel_times.where(air_travel_times <= 3, other=3)
 
 time_matrix = []
 for i in range(len(teams) * 2):
@@ -150,9 +147,11 @@ for i in range(len(teams) * 2):
 
 time_callback_index = routing.RegisterTransitCallback(
     create_time_callback(time_matrix))
-routing.AddDimensionWithVehicleTransits(
-    time_callback_index,
-    0,  # allow waiting time
-    [365],  # maximum time per vehicle
-    True,  # start cumul to zero
-    'Time')
+
+print(dir(time_callback_index))
+
+#routing.AddDimensionWithVehicleTransits(time_callback_index,
+#    0,  # allow waiting time
+#    [365],  # maximum time per vehicle
+#    True,  # start cumul to zero
+#    'Time')

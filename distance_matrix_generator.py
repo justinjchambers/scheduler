@@ -3,7 +3,7 @@ from math import radians, cos, sin, asin, sqrt
 
 # read the CSV file
 df = pd.read_csv(
-    '/Users/justinchambers/Desktop/Programming/MLS/Schedule/data/venues.csv')
+    'data/venues.csv')
 
 # define the Haversine formula to compute the distance between two coordinates
 

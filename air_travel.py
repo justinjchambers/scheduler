@@ -6,13 +6,13 @@ EARTH_RADIUS = 6371
 
 # Read the airports from the CSV file
 airports = []
-with open('/Users/justinchambers/Desktop/Programming/MLS/Schedule/data/airports.csv') as file:
+with open('data/airports.csv') as file:
     reader = csv.DictReader(file)
     for row in reader:
         airports.append(row)
 
 # Calculate the travel times between airports and write to a CSV file
-with open('/Users/justinchambers/Desktop/Programming/MLS/Schedule/data/air_travel_data.csv', 'w', newline='') as file:
+with open('data/air_travel_data.csv', 'w', newline='') as file:
     writer = csv.writer(file)
     # Write header row
     writer.writerow(['Origin', 'Destination', 'Travel Time (hrs)'])

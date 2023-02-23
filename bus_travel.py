@@ -4,7 +4,7 @@ import time
 import os
 import config
 
-data_directory = '/Users/justinchambers/Desktop/Programming/MLS/Schedule/data'
+data_directory = 'data'
 if not os.path.exists(data_directory):
     os.makedirs(data_directory)
 
@@ -13,7 +13,7 @@ gmaps = googlemaps.Client(key='config.api_key')
 
 # read the CSV file containing the venues data
 venues = pd.read_csv(
-    '/Users/justinchambers/Desktop/Programming/MLS/Schedule/data/venues.csv')
+    'data/venues.csv')
 
 # define a function to get the travel time between two locations
 
@@ -52,6 +52,6 @@ for i, row1 in venues.iterrows():
             bus_travel_times.loc[row2['name'], row1['name']] = travel_time
 
 # save the travel times to a CSV file
-output_file = '/Users/justinchambers/Desktop/Programming/MLS/Schedule/data/bus_travel_time.csv'
+output_file = 'data/bus_travel_time.csv'
 bus_travel_times.to_csv(output_file, index_label='name', float_format='%.2f')
 print(f'Travel times saved to {output_file}')
